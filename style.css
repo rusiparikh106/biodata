@@ -1,0 +1,281 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+header {
+    background: url('home-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.vertical-menu {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.vertical-menu a:hover {
+    color: #ffd700;
+    transform: translateX(10px);
+}
+
+.hero {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #222;
+    color: #f8f9fa;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* About Section Styling with Card View */
+.about-section {
+    background: url('about-usjpg.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #ffd700;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.stat {
+    color: #fff;
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+.stat p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: #ffd700;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffcc00;
+}
+
+/* Gallery Section Styling */
+.gallery-section {
+    background: url('gallery-background.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+/* Horizontal scrolling row */
+.gallery-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for a cleaner look */
+.gallery-row::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-card {
+    position: relative;
+    min-width: 300px;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Hover effect */
+.gallery-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffd700;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.gallery-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Navigation buttons */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffd700;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Interests Section Styling */
+.interests-section {
+    background: url('interests-background.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.interests-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+/* Grid layout for interests */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual interest card styling */
+.interest-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.interest-card:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.interest-card i {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.interest-card h3 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.interest-card p {
+    color: #e0e0e0;
+    font-size: 1rem;
+}
